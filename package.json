@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@sentry/browser": "^8.41.0",
+    "@zapt/zapt-js": "^1.0.6",
+    "docx": "^7.7.0",
+    "file-saver": "^2.0.5",
     "solid-js": "^1.8.22"
   },
   "devDependencies": {
