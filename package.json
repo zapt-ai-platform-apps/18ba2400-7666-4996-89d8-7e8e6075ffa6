@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Business Grant Finder app built with SolidJS and Vite",
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,7 +13,7 @@
   },
   "dependencies": {
     "@sentry/browser": "^8.41.0",
-    "@zapt/zapt-js": "^1.0.6",
+    "@sentry/node": "^8.41.0",
     "docx": "^7.7.0",
     "file-saver": "^2.0.5",
     "solid-js": "^1.8.22"

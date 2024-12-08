@@ -1,3 +1,14 @@
-import { initializeZapt } from '@zapt/zapt-js';
-
-export const { createEvent } = initializeZapt(import.meta.env.VITE_PUBLIC_APP_ID);
+export async function createEvent(event_type, data_input) {
+  const response = await fetch(`/api/${event_type}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data_input),
+  });
+  if (!response.ok) {
+    throw new Error('Network response was not ok ' + response.statusText);
+  }
+  const data = await response.json();
+  return data;
+}
